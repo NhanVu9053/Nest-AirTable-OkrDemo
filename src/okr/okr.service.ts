@@ -146,7 +146,7 @@ export class OkrService {
 
   okrEntityFromAirtableRecord = (record: Record<FieldSet>): Okr => ({
     id: record.getId(),
-    name: record.get("Name") as string,
+    name: record.get("name") as string,
     // isComplete: !!record.get("isComplete"),
   });
 }

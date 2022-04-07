@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { AirtableModule } from './airtable/airtable.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { OkrModule } from './okr/okr.module';
+import { AuthModule } from './auth/auth.module';
+
 
 @Module({
   imports: [
@@ -21,6 +23,7 @@ import { OkrModule } from './okr/okr.module';
       isGlobal: true,
     }),
     OkrModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

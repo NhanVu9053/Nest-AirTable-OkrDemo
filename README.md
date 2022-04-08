@@ -16,8 +16,15 @@ Feedback welcome!
   - `Name` (single line text)
  
 
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Auth0
+
+- Create Account at link `https://auth0.com/signup`  
+
+ - Create `APIs` . At `Setting` Enable `Enable RBAC` `Add Permissions in the Access Token` `Allow Skipping User Consent` `Allow Offline Access`
+
+## Create .ENV
+
+- Create .env file look like `env.sample` 
 
 ## Description
 

@@ -1,5 +1,6 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import { AuthorizationGuard } from 'src/auth/auth.guard';
 import { CreateOkrDto } from './dto/create-okr.dto';
 import { OkrService } from './okr.service';
 
@@ -8,13 +9,15 @@ export class OkrController {
     constructor( private readonly okrService: OkrService){}
 
 
-    @UseGuards(AuthGuard('jwt'))
+    // @UseGuards(AuthGuard('jwt'))
+    @UseGuards(AuthorizationGuard)
     @Get()
     async findAll() {
-        return await this.okrService.findAll();
+        console.log('controller');
+        return 'This is a protected resource. Welcome member';
     }
 
-    @UseGuards(AuthGuard('jwt'))
+    @UseGuards(AuthorizationGuard)
     @Get("/:id")
     async find(@Param("id") id: string) {
         return await this.okrService.find(id);

@@ -13,8 +13,7 @@ export class OkrController {
     @UseGuards(AuthorizationGuard)
     @Get()
     async findAll() {
-        console.log('controller');
-        return 'This is a protected resource. Welcome member';
+        return await this.okrService.findAll();
     }
 
     @UseGuards(AuthorizationGuard)

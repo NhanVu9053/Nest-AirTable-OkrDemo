@@ -83,7 +83,7 @@ export class OkrService {
           throw new NotFoundException(
             `${id} not found in ${
               this.airtableTableName
-            } in ${this.airtableService.getBaseId()}`,
+            } in Base ${this.airtableService.getBaseId()}`,
           );
         default:
           throw error;

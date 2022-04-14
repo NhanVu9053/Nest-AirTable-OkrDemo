@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  nestjs:
+    container_name: OKR1_container
+   
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"   
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      
